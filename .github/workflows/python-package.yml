@@ -23,8 +23,9 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        python -m pip install jsonschema jsonref 
+        python -m pip install jsonschema jsonref pytest
     - name: Validate the schemas
       run: |
         # Make sure they are proper JSON schemas
         python tests/validate_json_schemas.py
+        pytest tests
