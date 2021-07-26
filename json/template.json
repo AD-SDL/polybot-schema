@@ -1,0 +1,18 @@
+{
+  "description": "Definition of how to generate a new sample",
+  "properties": {
+    "workflow_file_hash": {
+      "type": "string",
+      "description": "Identifier of the workflow file associated with this template",
+      "pattern": "[0-9a-f]{10}"
+    },
+    "inputs": {
+      "type": "object",
+      "description": "Initial values for each parameter to the workflow",
+      "additionalProperties": {
+        "type": "number"
+      }
+    }
+  },
+  "additionalProperties": true
+}
