@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/7/schema",
+  "description": "Description of a sample provenance and data",
+  "type": "object",
+  "properties": {
+    "timestamp": {
+      "description": "List of the events that have occured for the sample",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "description": "List of timestamps and event in format: [timestamp] |[event type]| note",
+        "format": "(\\d+\\.\\d+): |(\\w+)| (.+)"
+      }
+    },
+    "raw_output": {
+      "description": "Data as acquired by sensors. Post-processing to remove instrument artifacts is acceptable.",
+      "anyOf": [
+        {"type":  "object"},
+        {"$ref": "ndarray.json#"}
+      ]
+    }
+  }
+}

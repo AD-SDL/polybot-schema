@@ -22,3 +22,14 @@ def test_template(example):
     with example_path.joinpath(example).open() as fp:
         example_dict = json.load(fp)
     validator.validate(example_dict)
+
+
+@mark.parametrize(
+    "example", ['sample.json']
+)
+def test_samples(example):
+    validator = _make_validator('sample.json')
+    with example_path.joinpath(example).open('rb') as fp:
+        example_dict = json.loads(fp.read().decode('utf-8', 'ignore'))
+    validator.validate(example_dict)
+
