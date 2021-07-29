@@ -1,7 +1,7 @@
 # polybot-schema
 [![Python package](https://github.com/AD-SDL/polybot-schema/actions/workflows/python-package.yml/badge.svg)](https://github.com/AD-SDL/polybot-schema/actions/workflows/python-package.yml)
 
-Data Schemas ad Python Tools for the Polybot Project
+Data Schemas and Python Tools for the Polybot Project
 
 ## Organization
 

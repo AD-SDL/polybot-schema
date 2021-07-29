@@ -9,9 +9,16 @@
     },
     "inputs": {
       "type": "object",
-      "description": "Initial values for each parameter to the workflow",
+      "description": "Initial values for each parameter to the workflow. Null values indicate parameters without a ",
       "additionalProperties": {
-        "type": "number"
+        "anyOf": [
+          {
+            "type": "number"
+          },
+          {
+            "type": "null"
+          }
+        ]
       }
     }
   },
